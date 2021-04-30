@@ -1,0 +1,288 @@
+html, body{
+    height:100%;
+    min-width: 300px;
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+    font: 1em helvetica;
+    /*-webkit-overflow-scrolling: touch;*/
+}
+
+#root{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid rgb(246,140,31);
+    width: 8em;
+    height: 8em;
+    -webkit-animation: spin 0.5s linear infinite;
+    animation: spin 0.5s linear infinite;
+  }
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.pdfImg{
+  width: 95%;
+  object-fit:contain;
+  margin:2.5%;
+  box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.pdfContainer{
+  flex:9;
+  overflow: auto;
+  background-color:gray;
+}
+
+.load{
+  background-color: white;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+.imgListBox{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.App{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: honeydew;
+}
+
+.Main{
+    flex:9;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+.formStyles input{
+  border: none;
+  border-bottom:2px solid rgb(233,233,233);
+  outline: none;
+}
+
+.inputStyles{
+  border: none;
+}
+
+.Footer{
+  flex:1;
+  width:100%;
+  background-color: rgb(246,140,31);
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font:1em helvetica;
+  min-height: 2em;
+}
+
+.redFooter{
+  flex:1;
+  width:100%;
+  background-color: rgb(221,76,57);
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font:1em helvetica;
+  min-height: 2em;
+}
+
+.Header{
+  flex:1;
+  background-color: rgb(73,84,102);
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font:1em helvetica;
+  min-height: 2em;
+}
+
+.lightHeader{
+  flex:1;
+  background-color: rgb(242,242,230);
+  border-bottom: 1px solid orange;
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font:1em helvetica;
+  min-height: 2em;
+}
+
+.buttonStyles{
+  background-color: rgb(221,76,57);
+  color:whitesmoke;
+  font: 1em helvetica;
+  border: none;
+  height: 3em;
+  outline: none;
+}
+
+.whiteTitle{
+  position: absolute;
+  background-color:rgba(0,0,0,0);
+  text-align:center;
+}
+
+.darkTitle{
+  position: absolute;
+  color: black;
+  background-color:rgba(0,0,0,0);
+  text-align:center;
+}
+
+.backButton{
+  color: black;
+  background-color:rgba(0,0,0,0);
+  width: 100%;
+  text-align:center;
+  display: flex;
+}
+
+.guideTable table{
+  table-layout: fixed;
+  border-collapse: collapse;
+  width: 100%;
+  border-bottom: 2px solid orange;
+}
+
+.guideTable th{
+  text-align:left;
+  border-top: 2px solid orange;
+}
+.guideTable td{
+  border-top: 2px solid orange;
+}
+
+.divisionTable{
+  margin-top: 2em;
+}
+
+.divisionTable table{
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+.divisionTable th{
+  background-color: rgb(241, 241, 241);
+  text-align: center;
+}
+
+.divisionTable td{
+  text-align: left;
+}
+
+.searchTable{
+  margin-top: 2em;
+  text-align: center;
+}
+
+.searchTable table{
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.searchTable th{
+  background-color: rgb(241, 241, 241);
+  text-align: center;
+}
+
+.notSearchImg{
+  object-fit: contain;
+  width: 200px;
+  height: 100px;
+}
+
+.searchButton{
+  width:100%;
+  height: 2em;
+  color: white;
+  background-color: rgb(73,84,102);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.commonTable{
+  width:100%;
+  table-layout:fixed;
+  text-align:center;
+  border-collapse:collapse;
+  border: 1px solid rgb(233,233,233);
+}
+
+.commonTable th{
+  background-color: rgb(241, 241, 241);
+  text-align: center;
+  padding: 0.5em 0em 0.5em 0em;
+}
+
+.fileButton{
+  border:2px solid rgb(176, 184, 190);
+  border-radius: 1em;
+  padding:0.125em 0.5em 0.125em 0.5em;
+  margin-left: 0.5em;
+}
+
+.radioDiv img{
+  filter: grayscale(100%)
+}
+
+.radioDiv input[type="radio"]:checked + img{
+  filter: grayscale(0%);
+}
+
+.radioDiv label{
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.labelStyle{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:'center';
+}
+
+.labelStyle span{
+  flex:3;
+  background-color: rgb(241, 241, 241);
+  text-align: center;
+  padding:0.5em 0em 0.5em 0em;
+}
+
+.labelStyle input, .labelStyle select, .labelStyle div{
+  flex:5;
+}
